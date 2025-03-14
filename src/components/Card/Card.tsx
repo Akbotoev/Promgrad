@@ -1,11 +1,13 @@
-import styles from './Styles.module.scss';
+import scss from "./Styles.module.scss";
 
-
-
-export const Card = () => {
+const Card = () => {
   return (
-    <div>
-
+    <div className={scss.Card}>
+      <div className="container">
+        <div className={scss.content}></div>
+      </div>
     </div>
   );
-}
+};
+
+export default Card;

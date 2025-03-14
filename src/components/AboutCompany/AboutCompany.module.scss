@@ -1,0 +1,32 @@
+.AboutCompany {
+  .content {
+    display: flex;
+    justify-content: space-between;
+    .description {
+      display: flex;
+      flex-direction: column;
+      width: 650px;
+      h1 {
+        font-size: 2.1rem;
+        span {
+          color: #0a3d62;
+        }
+      }
+      p {
+        margin-block: 2rem 5rem;
+        font-size: 1.4rem;
+      }
+      .achivements {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        h1 {
+          color: #0a3d62;
+        }
+        p {
+          margin-block: 0.5rem 0;
+        }
+      }
+    }
+  }
+}
