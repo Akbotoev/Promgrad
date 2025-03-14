@@ -1,10 +1,5 @@
-import styles from './Styles.module.scss';
-
+import styles from "./Styles.module.scss";
 
 export const CallBack = () => {
-  return (
-    <div>
-
-    </div>
-  );
-}
+  return <div></div>;
+};
