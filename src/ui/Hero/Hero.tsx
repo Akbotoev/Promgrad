@@ -13,9 +13,9 @@ export const Hero = () => {
             <p className={styles.info}>Проектируем и создаем точные чертежи для надежного строительства</p>
           </div>
           <div className={styles.icons}>
-            <Image src="/images/Bilim.svg" alt="Bimkg" width={80} height={40} />
-            <Image src="/images/prom.svg" alt="Promgrad" width={80} height={40} />
-            <Image src="/images/Archi.svg" alt="Archi Vibe" width={80} height={40} />
+            <img src="/images/Bilim.svg" alt="Bimkg" width={80} height={40} />
+            <img src="/images/prom.svg" alt="Promgrad" width={80} height={40} />
+            <img src="/images/Archi.svg" alt="Archi Vibe" width={80} height={40} />
           </div>
         </div>
       </section>
