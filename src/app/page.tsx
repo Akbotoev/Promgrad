@@ -1,5 +1,10 @@
-import Home from "@/components/Home";
+import { Hero } from "@/ui/Hero";
 
-const page = () => <Home />;
 
-export default page;
+export default function Home() {
+  return (
+    <>
+    <Hero/>
+    </>
+  );
+}
