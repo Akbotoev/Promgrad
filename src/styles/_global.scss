@@ -1,5 +1,9 @@
 .container {
-    max-width: 1240px;
-    margin: 0 auto;
-    padding: 0 20px;   
+  width: 90%;
+  margin-inline: auto;
+  font-family: sans-serif;
+}
+
+button {
+  cursor: pointer;
 }
