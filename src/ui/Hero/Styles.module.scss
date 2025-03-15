@@ -56,7 +56,16 @@
   .icons {
     display: flex;
     gap: 76px;
-    margin-right:30px;
+    margin-right: 30px;
     align-self: flex-end;
   }
+  
+  .icons img {
+    transition: transform 0.3s ease; 
+  }
+  
+  .icons img:hover {
+    transform: scale(1.1); 
+  }
+  
   
