@@ -2,8 +2,7 @@ import scss from "./AboutCompany.module.scss";
 
 const AboutCompany = () => {
   return (
-    <div id="about" className="container">
-    <div className={scss.AboutCompany}>
+    <div id="about" className={scss.AboutCompany}>
       <div className="container">
         <div className={scss.content}>
           <h2 className={scss.title}>О компании</h2>
@@ -40,7 +39,6 @@ const AboutCompany = () => {
           </div>
         </div>
       </div>
-    </div>
     </div>
   );
 };

@@ -98,8 +98,7 @@ const Card = () => {
   const [quantity, setQuantity] = useState<number>(8);
 
   return (
-    <div  id="portfolio" className="container">
-    <div className={scss.Card}>
+    <div id="portfilio" className={scss.Card}>
       <div className="container">
         <div className={scss.content}>
           <div className={scss.header}>
@@ -145,7 +144,6 @@ const Card = () => {
           )}
         </div>
       </div>
-    </div>
     </div>
   );
 };
