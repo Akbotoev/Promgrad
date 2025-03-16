@@ -1,0 +1,80 @@
+.footer {
+  display: flex;
+  margin-top: 120px;
+  background-color: #0a3d62;
+  .footer_left {
+    width: 100%;
+    color: white;
+    height: auto;
+    padding: 40px 0;
+    h1 {
+      padding: 20px 50px;
+    }
+    .display_footer {
+      display: flex;
+      padding: 30px 0;
+      gap: 120px;
+      .links {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        nav {
+          padding: 0 50px;
+          display: flex;
+          flex-direction: column;
+          gap: 20px;
+          a {
+            color: white;
+            text-decoration: none;
+            font-size: 1.2rem;
+            font-family: sans-serif;
+            font-weight: 600;
+            &:hover {
+              text-decoration: underline;
+            }
+          }
+        }
+        .socials_links {
+          padding: 0 50px;
+          display: flex;
+          flex-direction: column;
+          gap: 18px;
+          a {
+            text-decoration: none;
+            color: white;
+            font-size: 1.1rem;
+            font-family: sans-serif;
+            font-weight: 600;
+          }
+        }
+      }
+      .contact_footer {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        gap: 35px;
+        .contacts {
+          display: flex;
+          flex-direction: column;
+          gap: 8px;
+          h3 {
+            font-size: 1rem;
+            color: #e0e0e0;
+            font-weight: 700;
+            font-family: sans-serif;
+          }
+          h4 {
+            font-weight: 100;
+            font-size: 1rem;
+            color: #e0e0e0;
+            font-family: sans-serif;
+          }
+        }
+      }
+    }
+  }
+  .footer_map {
+    width: 100%;
+    max-width: 800px;
+  }
+}
