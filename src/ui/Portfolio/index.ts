@@ -1,1 +1,1 @@
-export { Potrfolio } from './Potrfolio'
+export { Potrfolio } from "./Potrfolio";
