@@ -9,9 +9,9 @@ export const Header = () => {
           <nav className={styles.nav}>
             <a href="#about">О компании</a>
             <a href="#portfolio">Портфолио</a>
-            <a href="#">Контакты</a>
+            <a href="#footer">Контакты</a>
           </nav>
-          <a href="#" className={styles.button}>
+          <a href="#formik" className={styles.button}>
             Связаться
           </a>
         </div>
