@@ -53,6 +53,12 @@
           cursor: pointer;
           user-select: none;
           position: relative;
+          h4 {
+            font-size: 1rem;
+            color: #1e1e1e;
+            font-weight: 500;
+            border-bottom: solid 1px #1e1e1e;
+          }
           input[type="checkbox"] {
             opacity: 0;
             position: absolute;
@@ -60,6 +66,7 @@
             height: 24px;
             cursor: pointer;
           }
+
           .customCheckbox {
             width: 24px;
             height: 24px;
@@ -87,6 +94,11 @@
               font-weight: bold;
             }
           }
+        }
+        .error {
+          color: #d32f2f;
+          font-size: 14px;
+          margin-top: 5px;
         }
         .button {
           width: 100%;
