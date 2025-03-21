@@ -1,3 +1,4 @@
+import { BurgerMenu } from "@/ui/BurgerMenu";
 import styles from "./Styles.module.scss";
 
 export const Header = () => {
@@ -10,10 +11,14 @@ export const Header = () => {
             <a href="#about">О компании</a>
             <a href="#portfolio">Портфолио</a>
             <a href="#footer">Контакты</a>
-          </nav>
-          <a href="#formik" className={styles.button}>
+            <a href="#formik" className={styles.button}>
             Связаться
           </a>
+          </nav>
+         
+        </div>
+        <div className={styles["burger-menu"]}>
+        <BurgerMenu/>
         </div>
       </header>
     </div>
