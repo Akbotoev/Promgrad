@@ -6,7 +6,7 @@ import { PhotoProvider, PhotoView } from "react-photo-view";
 import "react-photo-view/dist/react-photo-view.css";
 import Image from "next/image";
 import scss from "./Card.module.scss";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 interface ICard {
   image: string;
@@ -79,6 +79,13 @@ const data: ICard[] = [
     address: "г. Бишкек",
     year: 2024,
   },
+  {
+    image:
+      "https://s3-alpha-sig.figma.com/img/4bc9/8453/c905744381a92b115a8ca94c93afa22c?Expires=1742774400&Key-Pair-Id=APKAQ4GOSFWCW27IBOMQ&Signature=lKbJ7yAcfY-dhw9XxrajXlwAno2~TEstHdtIsozDKLaksNc~L6u7iZbpKRs6L2UqkiAAlPS00ywT-uFWo1Qd2Z1AtP-P~kRv~TWQEqKRd9vdxrIvePgsawpUdXiD5rcZSu2YJxb3nZoHUQeVJg77FUtR87NjMyuBLy~KZg7V4NGRZ-G4StWbuqSlZnmz1xojbJywFDL6z-J1gwDzRCAAus4mH4k~e9Xy9lLNyZDFJAChdhfRATE~ZrnTpuaCO5tP4VxBD~k1tKfH4WLrMmkl2cOTJaL9YEFiwABkX-nWJMS521pRRli-OxYIqLSfkI~Gtnuqekj72IQ8OGb7zXiCgA__",
+    title: 'ЖК "Ала-Тоо Резиденс" ',
+    address: "г. Бишкек",
+    year: 2024,
+  },
 ];
 
 interface Brand {
@@ -96,6 +103,28 @@ const brends: Brand[] = [
 const Card = () => {
   const [brend, setBrend] = useState<string>("Все");
   const [quantity, setQuantity] = useState<number>(8);
+
+  useEffect(() => {
+    const updateQuantity = () => {
+      const width = window.innerWidth;
+      if (width > 1280) {
+        setQuantity(8);
+      } else if (width > 700) {
+        setQuantity(6);
+      } else if (width > 500) {
+        setQuantity(4);
+      } else {
+        setQuantity(3);
+      }
+    };
+
+    updateQuantity();
+    window.addEventListener("resize", updateQuantity);
+
+    return () => {
+      window.removeEventListener("resize", updateQuantity);
+    };
+  }, []);
 
   return (
     <div id="portfolio" className={scss.Card}>
@@ -138,7 +167,11 @@ const Card = () => {
             </PhotoProvider>
           </div>
           {data.length > quantity && (
-            <button onClick={() => setQuantity(quantity + 4)}>
+            <button
+              onClick={() =>
+                setQuantity(quantity == 6 ? quantity + 3 : quantity + 4)
+              }
+            >
               Показать ещё
             </button>
           )}
