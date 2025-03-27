@@ -29,6 +29,7 @@ const Card = () => {
 
   async function getData() {
     const { data } = await axios.get(
+      
       `${process.env.NEXT_PUBLIC_API_URL}/product/product/`
     );
     if (brend === "Все") {
