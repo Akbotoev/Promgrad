@@ -4,8 +4,10 @@ const nextConfig: NextConfig = {
   images: {
     remotePatterns: [
       {
-        protocol: "https",
-        hostname: "s3-alpha-sig.figma.com",
+        protocol: "http",
+        hostname: "13.48.44.6",
+        port: "",
+        pathname: "/media/product/**",
       },
     ],
   },
