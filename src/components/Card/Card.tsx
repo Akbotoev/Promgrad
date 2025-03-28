@@ -30,7 +30,7 @@ const Card = () => {
   async function getData() {
     try {
       const { data } = await axios.get(
-        `${process.env.NEXT_PUBLIC_API_URL}/product/product/`
+        'http://13.48.44.6/product/product'
       );
       console.log("Данные получены:", data);
   
@@ -48,7 +48,7 @@ const Card = () => {
   
  async function getBrends() {
   try {
-    const { data } = await axios.get(`${process.env.NEXT_PUBLIC_API_URL}/product/categories/`);
+    const { data } = await axios.get('http://13.48.44.6/product/categories');
     console.log("Категории получены:", data);
     setBrends(data);
   } catch (error) {
