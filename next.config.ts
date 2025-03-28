@@ -6,8 +6,7 @@ const nextConfig: NextConfig = {
       {
         protocol: "https",
         hostname: "promgrad.pp.ua",
-        port: "",
-        pathname: "/media/product/**",
+        pathname: "/media/**",
       },
     ],
   },
