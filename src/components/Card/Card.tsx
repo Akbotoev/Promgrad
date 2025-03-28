@@ -30,40 +30,46 @@ const Card = () => {
   async function getData() {
     try {
       const { data } = await axios.get(
-        `${process.env.NEXT_PUBLIC_API_URL}/product/product/`
+        `${process.env.NEXT_PUBLIC_API_URL}/product/products/`
       );
       console.log("Данные получены:", data);
-  
+
       if (brend === "Все") {
         setData(data);
       } else {
         setData(data.filter((el: ICard) => el.category_name.includes(brend)));
       }
     } catch (error: any) {
-      console.error("Ошибка при запросе данных:", error.response?.data || error.message);
+      console.error(
+        "Ошибка при запросе данных:",
+        error.response?.data || error.message
+      );
     }
   }
-  
-  
-  
- async function getBrends() {
-  try {
-    const { data } = await axios.get(`${process.env.NEXT_PUBLIC_API_URL}/product/categories/`);
-    console.log("Категории получены:", data);
-    setBrends(data);
-  } catch (error) {
-    if (axios.isAxiosError(error)) {
-      console.error("Ошибка при запросе категорий:", error.response?.data || error.message);
-    } else {
-      console.error("Ошибка при запросе категорий:", error);
+
+  async function getBrends() {
+    try {
+      const { data } = await axios.get(
+        `${process.env.NEXT_PUBLIC_API_URL}/product/categories/`
+      );
+      console.log("Категории получены:", data);
+      setBrends(data);
+    } catch (error) {
+      if (axios.isAxiosError(error)) {
+        console.error(
+          "Ошибка при запросе категорий:",
+          error.response?.data || error.message
+        );
+      } else {
+        console.error("Ошибка при запросе категорий:", error);
+      }
     }
   }
-}
 
   useEffect(() => {
     getData();
     getBrends();
-  
+
     const updateQuantity = () => {
       const width = window.innerWidth;
       if (width > 1280) {
@@ -76,15 +82,14 @@ const Card = () => {
         setQuantity(3);
       }
     };
-  
+
     updateQuantity();
     window.addEventListener("resize", updateQuantity);
-  
+
     return () => {
       window.removeEventListener("resize", updateQuantity);
     };
   }, [brend]);
-  
 
   return (
     <div id="portfolio" className={scss.Card}>

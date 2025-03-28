@@ -4,10 +4,9 @@ const nextConfig: NextConfig = {
   images: {
     remotePatterns: [
       {
-        protocol: "http",
-        hostname: "13.48.44.6",
-        port: "",
-        pathname: "/media/product/**",
+        protocol: "https",
+        hostname: "promgrad.pp.ua",
+        pathname: "/media/**",
       },
     ],
   },
