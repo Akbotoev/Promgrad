@@ -8,7 +8,7 @@ import { Hero } from "@/ui/Hero";
 export default function Home() {
   return (
     <>
-      <Header />
+      {/* <Header /> */}
       <Hero />
       <AboutCompany />
       <Card />

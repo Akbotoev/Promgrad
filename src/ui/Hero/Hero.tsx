@@ -1,5 +1,9 @@
 import { Header } from "@/components/Header";
 import styles from "./Styles.module.scss";
+import Image from "next/image";
+import icon1 from '@/../public/images/Лого Bimkg.svg'
+import icon2 from '@/../public/images/Promgrad.svg'
+import icon3 from '@/../public/images/Archi Vibe LOGO.svg'
 
 export const Hero = () => {
   return (
@@ -17,9 +21,18 @@ export const Hero = () => {
             </p>
           </div>
           <div className={styles.icons}>
-            <img src="/images/bilm.svg" alt="Bimkg" width={100} height={40} />
-            <img src="/images/arch.svg" alt="Promgrad" width={110} height={40} />
-            <img src="/images/arche.svg"alt="Archi Vibe"width={100}height={40} />
+            <div className={styles.icon}>
+              <Image src={icon1} alt="icon" width={23} height={26}/>
+              <p className={styles.iconTitle}>Bimkg</p>
+            </div>
+            <div className={styles.icon}>
+              <Image src={icon2} alt="icon" width={23} height={26}/>
+              <p className={styles.iconTitle}>Promgrad</p>
+            </div>
+            <div className={styles.icon}>
+              <Image src={icon3} alt="icon" width={23} height={26}/>
+              <p className={styles.iconTitle}>Archi Vibe</p>
+            </div>
             <a href="#formik" className={styles.buttons}>
               Связаться
             </a>
