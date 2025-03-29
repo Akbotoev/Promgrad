@@ -1,12 +1,23 @@
+import Image from "next/image";
 import scss from "./AboutCompany.module.scss";
-
+import companyPhoto from "@/../public/promgrad_house.webp";
 const AboutCompany = () => {
   return (
     <div id="about" className={scss.AboutCompany}>
       <div className="container">
         <div className={scss.content}>
           <div className={scss.about}>
-            <h2 className={scss.title}>О компании</h2>
+            <div className={scss.photoBlock}>
+              <h2 className={scss.title}>О компании</h2>
+              <Image
+                src={companyPhoto.src}
+                className={scss.photo}
+                width={300}
+                height={300}
+                alt="compnay"
+              />
+            </div>
+
             <div className={scss.description}>
               <h1>
                 Мы — команда <span>профессионалов</span> в области{" "}

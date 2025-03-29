@@ -91,6 +91,7 @@ const Card = () => {
     };
   }, [brend]);
 
+
   return (
     <div id="portfolio" className={scss.Card}>
       <div className="container">

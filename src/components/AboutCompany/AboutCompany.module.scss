@@ -4,8 +4,30 @@
 
     .about {
       display: flex;
+      align-items: flex-start;
       justify-content: space-between;
-      @media (max-width: 500px) {
+      gap: 2rem;
+      .photoBlock{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        position: relative;
+        width: clamp(21.875rem, 8.203rem + 31.25vw, 37.5rem);
+
+        img {
+          border-radius: .5rem;
+          width: 100%;
+          top: 3rem;
+          height: clamp(13.75rem, -17.188rem + 45vw, 25rem);
+          position: absolute;
+          object-fit: cover;
+          z-index: -1;
+          @media(max-width: 700px) {
+            display: none;    
+          }
+        }
+      }
+      @media (max-width: 700px) {
         flex-direction: column;
         .description {
           width: 100%;
