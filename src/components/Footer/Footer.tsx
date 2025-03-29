@@ -49,9 +49,9 @@ const Footer = () => {
             width: "100%",
             height: "100%",
           }}
-          allowFullScreen // ✅ с большой буквы и без значения
+          allowFullScreen 
           loading="lazy"
-          referrerPolicy="no-referrer-when-downgrade" // ✅ camelCase
+          referrerPolicy="no-referrer-when-downgrade" 
         ></iframe>
       </div>
     </footer>
