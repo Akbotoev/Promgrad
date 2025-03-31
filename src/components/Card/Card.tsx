@@ -91,7 +91,6 @@ const Card = () => {
     };
   }, [brend]);
 
-
   return (
     <div id="portfolio" className={scss.Card}>
       <div className="container">
@@ -123,12 +122,14 @@ const Card = () => {
               {data.slice(0, quantity).map((el) => (
                 <div className={scss.block} key={el.id}>
                   <PhotoView src={el.image}>
-                    <Image
-                      width={300}
-                      height={300}
-                      src={el.image.trim()}
-                      alt="image"
-                    />
+                    <div className={scss.imgContainer}>
+                      <Image
+                        width={300}
+                        height={300}
+                        src={el.image.trim()}
+                        alt="image"
+                      />
+                    </div>
                   </PhotoView>
                   <p>{el.title}</p>
                   <div>
@@ -139,7 +140,7 @@ const Card = () => {
               ))}
             </PhotoProvider>
           </div>
-          {data.length > quantity && (
+          {data.length > quantity ? (
             <button
               onClick={() =>
                 setQuantity(quantity == 6 ? quantity + 3 : quantity + 4)
@@ -147,6 +148,8 @@ const Card = () => {
             >
               Показать ещё
             </button>
+          ) : (
+            <button onClick={() => setQuantity(8)}>Закрыть</button>
           )}
         </div>
       </div>
